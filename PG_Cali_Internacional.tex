@@ -1,0 +1,116 @@
+\documentclass[11pt,openany,oneside,letterpaper]{book_tesis}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{fontspec}			% Necesario para XeLaTeX o LuaLaTeX
+\usepackage{setspace}           % Interlineado
+\usepackage{titletoc}			% Formato del indice
+\usepackage{titlesec}			% Formato del indice
+\usepackage[left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+
+\usepackage{graphicx}  % Para insertar imágenes
+\usepackage{caption}   % Para personalizar leyendas
+\usepackage{float}     % Para control de posicionamiento de figuras
+
+\usepackage{changepage} % Para ajustar márgenes
+
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[backend=biber, style=apa]{biblatex} % Para usar bibliografia
+\usepackage{csquotes}
+\usepackage{enumitem}			% para las listas 
+\usepackage[nopatch=item]{microtype}		% Para que no salga error de polyglossia
+\usepackage{lipsum} % Carga el paquete lipsum
+\usepackage{microtype}
+\usepackage{hyperref} % Para enlaces a los capitulos secciones en el indice
+
+% \usepackage{showframe}                % Para ver lineas de margenes
+
+\addbibresource{parte_final/bibliografia.bib}
+
+\setmainfont{georgia} 			% Configura la fuente principal como Georgia
+
+\setlength{\parskip}{0.1mm}           % Espacio entre párrafos
+\setlength{\parindent}{36.1315pt}     % Indentación de los párrafos
+\setlength{\baselineskip}{0em} % Ajusta el espacio entre líneas
+
+\pagestyle{myheadings}
+
+\assignpagestyle{\chapter}{empty} % Para que las hojas de los capítulos no sean numeradas
+
+% Ajustar el espaciado vertical entre los capítulos en el índice
+\titlecontents{chapter}[0pt]{\addvspace{1pt}\bfseries}{\thecontentslabel.\hspace{1.6em}}{}{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{section}[0pt]{}{\thecontentslabel.\hspace{1em}}{}{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsection}[28pt]{}{\thecontentslabel.\hspace{1em}}{}{\titlerule*[0.5pc]{.}\contentspage}
+
+% Cambiar los títulos de los capítulos a mayúsculas
+% \titleformat{\chapter}[display]
+%{\normalfont\fontsize{13pt}{42pt}\selectfont\bfseries}{\MakeUppercase{\chaptertitlename}\ \thechapter}{-110pt}{\fontsize{13pt}{70pt}\selectfont}
+
+\titleformat{\chapter}
+{\normalfont\fontsize{13pt}{60pt}\selectfont\bfseries}{\thechapter.}{24pt}{\fontsize{13pt}{0pt}\selectfont}
+
+\titleformat{\section}{\bfseries\normalsize}{\thesection.}{16pt}{}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection.}{9pt}{}
+
+\titlespacing*{\chapter}{0pt}{*0}{0pt}
+\titlespacing*{\section}{0pt}{*0}{0pt}
+\titlespacing*{\subsection}{0pt}{*0}{0pt}
+
+% Definir un nuevo estilo de numeración para los capítulos
+% \renewcommand{\thechapter}{\Roman{chapter}}
+
+% Configuración de hyperref para desactivar colores y cuadros
+\hypersetup{
+	colorlinks=false, % Desactiva el color de los enlaces
+	pdfborder={0 0 0}, % Desactiva los cuadros alrededor de los enlaces
+}
+
+% Configuración de leyendas según APA 7
+%\captionsetup{
+%	format=plain,        % Formato de leyenda simple
+%	labelfont=bf,        % Fuente en negrita para etiquetas
+%	textfont=it,         % Fuente en cursiva para texto
+%	labelsep=period,     % Separador es un punto
+%}
+
+\captionsetup[figure]{
+	margin={1.27cm,0cm},
+	justification=RaggedRight, % Alineación a la izquierda
+	singlelinecheck=false,     % Permite leyendas de múltiples líneas
+	labelfont=bf,              % Fuente de etiqueta en negrita
+	textfont=it,         	% Fuente en cursiva para texto
+	labelsep=newline,           % Separador es un punto
+}
+
+\begin{document}
+	\spacing{2}                     % Interlineado
+	\frontmatter
+	\pagenumbering{gobble} % Eliminar numeración de página del índice
+	\include{caratula}
+	\thispagestyle{empty}
+	\sloppy
+	% Dedicatoria
+	%\include{parte_inicial/dedicatoria}
+	% Agradecimientos
+	%\include{parte_inicial/agradecimientos}
+	\renewcommand{\contentsname}{\hfill\bfseries\normalsize CONTENIDO\hfill}
+	\tableofcontents
+	\thispagestyle{empty}
+	\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
+		
+	\mainmatter
+	% Introduccción
+	\setcounter{page}{1}
+	\include{capitulos/introduccion}
+	% Marco teórico
+	\include{capitulos/marco_teorico}
+	% Marco aplicativo
+	\include{capitulos/marco_aplicativo}
+	% jConclusiones y recomendaciones
+	\include{capitulos/conclusiones_recomendaciones}
+	
+	\backmatter
+	% Bibliografía
+	\include{parte_final/bibliografia}
+\end{document}
