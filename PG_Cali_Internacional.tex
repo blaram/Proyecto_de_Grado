@@ -10,6 +10,9 @@
 \usepackage{graphicx}  % Para insertar imágenes
 \usepackage{caption}   % Para personalizar leyendas
 \usepackage{float}     % Para control de posicionamiento de figuras
+\usepackage{booktabs}   % Para líneas horizontales en
+\usepackage{array}      % Para personalizar alineación en columnas
+\usepackage{longtable} % Paquete para tablas largas
 
 \usepackage{changepage} % Para ajustar márgenes
 
@@ -36,6 +39,13 @@
 
 \pagestyle{myheadings}
 
+% Cambiar "Cuadro" a "Tabla"
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+% Cambiar "Índice de Cuadros" a "Índice de Tablas"
+\addto\captionsspanish{\renewcommand{\listtablename}{ÍNDICE DE TABLAS}}
+% Cambiar "Índice de figuras" a "ÍNDICE DE FIGURAS"
+\addto\captionsspanish{\renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}}
+
 \assignpagestyle{\chapter}{empty} % Para que las hojas de los capítulos no sean numeradas
 
 % Ajustar el espaciado vertical entre los capítulos en el índice
@@ -48,7 +58,7 @@
 %{\normalfont\fontsize{13pt}{42pt}\selectfont\bfseries}{\MakeUppercase{\chaptertitlename}\ \thechapter}{-110pt}{\fontsize{13pt}{70pt}\selectfont}
 
 \titleformat{\chapter}
-{\normalfont\fontsize{13pt}{60pt}\selectfont\bfseries}{\thechapter.}{24pt}{\fontsize{13pt}{0pt}\selectfont}
+{\normalfont\fontsize{13pt}{60pt}\selectfont\bfseries}{\thechapter}{24pt}{\fontsize{13pt}{0pt}\selectfont}
 
 \titleformat{\section}{\bfseries\normalsize}{\thesection.}{16pt}{}
 \titleformat{\subsection}{\bfseries\normalsize}{\thesubsection.}{9pt}{}
@@ -83,6 +93,54 @@
 	labelsep=newline,           % Separador es un punto
 }
 
+\captionsetup[table]{
+	margin={1.27cm,0cm},
+	labelfont=bf,
+	labelsep=newline,
+	justification=RaggedRight,
+	singlelinecheck=false,     % Permite leyendas de múltiples líneas
+	textfont=it,      % Texto de la leyenda en cursiva
+	% position=top,     % Leyenda arriba de la tabla
+	% skip=0pt          % Sin espacio entre la leyenda y la tabla
+}
+
+\captionsetup[longtable]{
+	margin={1.27cm,0cm},
+	labelfont=bf,
+	labelsep=newline,
+	justification=RaggedRight,
+	singlelinecheck=false,     % Permite leyendas de múltiples líneas
+	textfont=it,      % Texto de la leyenda en cursiva
+	% position=top,     % Leyenda arriba de la tabla
+	skip=17pt          % Sin espacio entre la leyenda y la tabla
+}
+
+% Configuración de la Lista de índices
+% Cambiar el nombre de "Índice de Figuras" y centrarlo en mayúsculas
+% \renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+
+% Modificar el formato del índice de figuras
+\makeatletter
+\renewcommand\listoffigures{%
+	\chapter*{\hfill\bfseries\normalsize ÍNDICE DE FIGURAS\hfill} % Título centrado
+	\addcontentsline{toc}{chapter}{\listfigurename}%
+	\noindent\hspace{0.6cm}\textbf{Fig.} \hfill \textbf{Descripción} \hfill \textbf{Pag.} \hfill % Encabezados
+	\par\vspace{-0.2cm} % Espacio entre encabezados y el listado
+	\@starttoc{lof}%
+}
+\makeatother
+
+% Modificar el formato del índice de tablas
+\makeatletter
+\renewcommand\listoftables{%
+	\chapter*{\hfill\bfseries\normalsize ÍNDICE DE TABLAS\hfill} % Título centrado
+	\addcontentsline{toc}{chapter}{\listtablename}%
+	\noindent\hspace{0.6cm}\textbf{Tabla} \hfill \textbf{Descripción} \hfill \textbf{Pag.} \hfill % Encabezados
+	\par\vspace{-0.2cm} % Espacio entre encabezados y el listado
+	\@starttoc{lot}%
+}
+\makeatother
+
 \begin{document}
 	\spacing{2}                     % Interlineado
 	\frontmatter
@@ -98,7 +156,14 @@
 	\tableofcontents
 	\thispagestyle{empty}
 	\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
-		
+	
+	% Índice de Figuras
+	\listoffigures
+	
+	
+	% Índice de Tablas
+	\listoftables
+	
 	\mainmatter
 	% Introduccción
 	\setcounter{page}{1}

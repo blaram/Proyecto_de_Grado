@@ -730,7 +730,7 @@
 \newcommand\bibname{Bibliography}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
-\newcommand\tablename{Table}
+\newcommand\tablename{Tabla}
 \newcommand\partname{Part}
 \newcommand\chaptername{Chapter}
 \newcommand\appendixname{Appendix}
