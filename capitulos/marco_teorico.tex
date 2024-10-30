@@ -216,8 +216,8 @@
 		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 		
 		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
-			\caption[Etapas del modelo en cascada]
-			{\newline Etapas del modelo en cascada.} % Leyenda en la parte superior
+			\caption[Etapas del Modelo en Cascada]
+			{\newline Etapas del Modelo en Cascada.} % Leyenda en la parte superior
 			\centering
 			\includegraphics[width=0.9\textwidth]{imagenes/figura2_1.png} % Inserta una imagen
 			
@@ -234,17 +234,17 @@
 		
 		Esta fase implicaría identificar las necesidades de la empresa de transporte, como la gestión de la venta de boletos, el registro de encomiendas y la asignación de rutas de buses. Se debe trabajar con los principales interesados, como administradores y empleados de la empresa, para definir claramente los procesos actuales y los problemas que el software debería resolver.
 	\subsection{Diseño del sistema y del software}
-		El proceso de diseño del sistema divide los requerimientos en sistemas hardware o software. Establece una arquitectura completa del sistema. El diseño del software implica identificar y describir las abstracciones fundamentales del sistema software y sus relaciones \parencite{sommerville2011introduccion}.
+	\label{subsec:Dis_sis_softwa} % Etiqueta para la subsección
+		Esta etapa implica la transformación de requisitos en una representación del software que pueda ser evaluada por su calidad antes de comenzar la codificación, se establecen la arquitectura general del sistema, la estructura de los datos, las interfaces principales y los algoritmos que proporcionarán la funcionalidad deseada, creando así un plan detallado para la construcción del producto \parencite{pressman2010ingenieria}.
 		
-		Esta fase incluiría el diseño de la arquitectura del sistema, la estructura de la base de datos y las interfaces de usuario para la gestión de buses y encomiendas.
 	\subsection{Implementación y prueba de unidad}
 		Durante esta etapa, el diseño del software se lleva a cabo como un conjunto o unidades de programas. La prueba de unidades implica verificar que cada una cumpla con su especificación \parencite{sommerville2011introduccion}.
 		
-		En esta etapa, se llevaría a cabo la programación del software utilizando herramientas adecuadas como lenguajes de programación, así como frameworks que permitan la integración de las funcionalidades necesarias para la venta de boletos, la gestión de encomiendas y la asignación de buses. El sistema debe permitir a los usuarios realizar transacciones, mientras que el backend gestionaría la logística de las rutas y encomiendas.
+		En esta etapa, se lleva a cabo la programación del software utilizando herramientas adecuadas como lenguajes de programación, así como frameworks que permitan la integración de las funcionalidades necesarias.
 	\subsection{Integración y prueba de sistema}
-		Los programas o las unidades individuales de programas se integran y prueban como un sistema completo para asegurar que se cumplan los requerimientos del software \parencite{sommerville2011introduccion}.
+		Es un proceso incremental donde los diferentes componentes o módulos del sistema se combinan y prueban como un sistema completo. Es una fase crítica que tiene dos objetivos distintos pero relacionados: por un lado, integrar los diferentes módulos o componentes en un sistema funcional completo, y por otro, verificar que el software satisface los requerimientos especificados y detectar errores de interacciones entre componentes, esta fase no solo se trata de encontrar errores en el software, sino también de demostrar al cliente que el sistema cumple con sus necesidades \parencite{sommerville2011introduccion}.
 		
-		Durante esta fase, se realizarían pruebas funcionales para garantizar que los procesos de venta de boletos, la gestión de encomiendas y la asignación de buses operen correctamente. Las pruebas incluirían la simulación de transacciones, el seguimiento de encomiendas y la verificación de la correcta asignación de rutas y conductores.
+		En esta fase, se realizarían pruebas funcionales para garantizar que los procesos de venta de boletos, la gestión de encomiendas y la asignación de buses operen correctamente. Las pruebas incluirían la simulación de transacciones, el seguimiento de encomiendas y la verificación de la correcta asignación de rutas y conductores.
 	\subsection{Operación y mantenimiento}
 		Normalmente, esta es la fase más larga del ciclo de vida. El sistema se instala y se pone en uso práctico. El mantenimiento implica corregir errores no descubiertos en las etapas anteriores del ciclo de vida, mejorar la implementación de las unidades del sistema y resaltar los servicios del sistema una vez que se descubren nuevos requerimientos \parencite{sommerville2011introduccion}.
 	\section{INGENIERÍA DE REQUERIMIENTOS}
@@ -257,24 +257,9 @@
 		
 		Dadas las definiciones anteriores podemos decir que la ingeniería de requerimientos es: una parte importante del desarrollo de software porque se puede utilizar para definir y comprender las expectativas y necesidades de las personas que utilizan el sistema. Este proceso incluye diversas actividades enfocadas en la investigación, documentación, uso y gestión de requisitos de software para garantizar que el producto final satisfaga las necesidades del negocio y de los clientes, lo que también se clasifica en requerimientos funcionales y requerimientos no funcionales.
 	\subsection{Requerimientos funcionales}
-		Los requerimientos funcionales describen lo que el sistema debe hacer, es decir, las funciones o características específicas que se deben implementar. En este proyecto, los requerimientos funcionales incluirían aspectos como:
-		\begin{itemize}[label=$\bullet$, left=0cm, labelsep = 1.05cm, topsep = 0pt, parsep = 0pt]
-			\item Gestión de rutas y horarios
-			\item Venta y reserva de boletos
-			\item Asignación de asientos
-			\item Registro y seguimiento de encomiendas
-			\item Gestión de flota de buses
-			\item Generación de reportes de ventas
-			\item Manejo de perfiles de usuarios (administradores, empleados)
-		\end{itemize}
+		Los requerimientos funcionales son descripciones de las funciones y capacidades específicas que el sistema debe realizar, es decir, las tareas concretas que el software debe ejecutar para cumplir con los objetivos de negocio. Según \textcite{sommerville2011introduccion}, estos requerimientos "definen los servicios y funciones del sistema, que son visibles y utilizables para los usuarios o clientes". Ejemplos comunes incluyen autenticación de usuario, procesamiento de transacciones o la generación de reportes.
 	\subsection{Requerimientos no funcionales}
-		Por otro lado, los requerimientos no funcionales especifican cómo debe funcionar el sistema en términos de rendimiento, usabilidad, seguridad y confiabilidad. Para el sistema, algunos de los requerimientos no funcionales incluyen:
-		\begin{itemize}[label=$\bullet$, left=0cm, labelsep = 1.05cm, topsep = 0pt, parsep = 0pt]
-			\item El sistema debe ser accesible desde múltiples dispositivos (computadoras, tablets y móviles).
-			\item Garantizar la protección de los datos de los usuarios mediante protocolos de seguridad adecuados.
-			\item Escalabilidad, capacidad de crecer para manejar aumento en usuarios y transacciones
-			\item Mantenibilidad, arquitectura modular para facilitar actualizaciones
-		\end{itemize}
+		Por otro lado, los requerimientos no funcionales se refieren a las cualidades y restricciones del sistema, tales como rendimiento, seguridad, y facilidad de uso. Estos determinan cómo debe comportarse el sistema y qué condiciones debe cumplir para ser eficiente y confiable, sin especificar funciones concretas. Para \textcite{pressman2010ingenieria}, estos requerimientos son esenciales porque "determinan la calidad global del software" y abarcan aspectos como tiempos de respuesta y compatibilidad. \textcite{sommerville2011introduccion} también destaca que los requerimientos no funcionales suelen influir en la arquitectura y diseño general del sistema más que en sus funciones específicas.
 	\subsection{Actividades de la ingeniería de requerimientos}
 		Hay múltiples enfoques para definir las actividades de la ingeniería de requerimientos y la elección de un modelo particular a menudo depende del tamaño y la complejidad del software en desarrollo. Esto da lugar a la posibilidad de que se implementen diferentes actividades, las cuales pueden variar tanto en su cantidad como en su naturaleza.
 		
@@ -297,7 +282,7 @@
 		
 		Algunas de las técnicas más comunes y efectivas para el levantamiento de requerimientos son:
 		
-		Entrevistas: Son útiles para obtener información detallada y directa de los usuarios y otros interesados. Pueden ser estructuradas, semiestructuradas o no estructuradas, dependiendo de la profundidad de la información que se desee obtener. Las entrevistas permiten aclarar aspectos complejos y detectar necesidades particulares de cada usuario o área de la organización.
+		\textbf{Entrevistas:} Son útiles para obtener información detallada y directa de los usuarios y otros interesados. Pueden ser estructuradas, semiestructuradas o no estructuradas, dependiendo de la profundidad de la información que se desee obtener. Las entrevistas permiten aclarar aspectos complejos y detectar necesidades particulares de cada usuario o área de la organización.
 		
 		De acuerdo a \textcite{diaz2013entrevista} en base a la clasificación antes mencionada se identifica que cada tipo de entrevista tiene su peculiaridad, sin embargo, en el momento de su desarrollo se presentan determinados momentos homogéneos. Estos momentos o fases de
 		la entrevista los vemos en la figura \ref{fig:figura2_2}.
@@ -318,25 +303,76 @@
 		
 		En conclusión \textcite{diaz2013entrevista} aclara que la entrevista es uno más de los instrumentos cuyo propósito es recabar datos, pero debido a su flexibilidad permite obtener información más profunda, detallada, que incluso el entrevistado y entrevistador no tenían identificada, ya que se adapta al contexto y a las características del entrevistado. Es valiosa en el campo de la investigación y más aún cuando se utiliza en estudios de tipo mixto como una visión complementaria del enfoque cuantitativo.
 						
-		Talleres de trabajo: Se utilizan para reunir a diferentes partes interesadas en un mismo espacio, facilitando la discusión colaborativa sobre los requerimientos. Estos talleres ayudan a resolver posibles conflictos entre usuarios y a consolidar una visión conjunta del sistema a desarrollar.
+		\textbf{Talleres de trabajo:} Se utilizan para reunir a diferentes partes interesadas en un mismo espacio, facilitando la discusión colaborativa sobre los requerimientos. Estos talleres ayudan a resolver posibles conflictos entre usuarios y a consolidar una visión conjunta del sistema a desarrollar.
 		
-		Observación directa: Este enfoque implica observar a los usuarios en su entorno laboral para comprender mejor los procesos actuales, las dificultades que enfrentan y cómo un sistema nuevo podría mejorar su desempeño. La observación es particularmente útil cuando los usuarios no pueden articular claramente sus necesidades o cuando los problemas son inherentes a las tareas que realizan.
+		\textbf{Observación directa:} Este enfoque implica observar a los usuarios en su entorno laboral para comprender mejor los procesos actuales, las dificultades que enfrentan y cómo un sistema nuevo podría mejorar su desempeño. La observación es particularmente útil cuando los usuarios no pueden articular claramente sus necesidades o cuando los problemas son inherentes a las tareas que realizan.
 		
-		Cuestionarios: Son una buena opción para obtener información de un amplio número de usuarios cuando no es posible realizar entrevistas individuales. Los cuestionarios permiten estructurar preguntas específicas sobre las necesidades del sistema, aunque son menos flexibles en cuanto a la obtención de respuestas detalladas.\\
+		\textbf{Cuestionarios:} Son una buena opción para obtener información de un amplio número de usuarios cuando no es posible realizar entrevistas individuales. Los cuestionarios permiten estructurar preguntas específicas sobre las necesidades del sistema, aunque son menos flexibles en cuanto a la obtención de respuestas detalladas.\\
 		\textbf{Paso 2: Análisis de requerimientos}
 		
 		El análisis de requerimientos es donde se busca definir las necesidades y expectativas de los usuarios. Esta fase se enfoca en transformar las necesidades identificadas durante el levantamiento de requerimientos en especificaciones claras y comprensibles. Según \textcite{sommerville2011introduccion}, el análisis de requerimientos no solo implica la recopilación de datos, sino también su organización y priorización para asegurar que el producto final cumpla con las expectativas del cliente. Este proceso requiere un enfoque sistemático y la participación activa de todos los involucrados, lo que facilita la identificación de posibles problemas y la aclaración de dudas desde el inicio del proyecto.
 		
 		Durante el análisis de requerimientos, se documenta estos requerimientos, esto se realiza mediante el uso de herramientas de modelado, como diagramas de casos de uso, que permiten visualizar las interacciones entre los usuarios y el sistema. Además, el análisis ayuda a identificar requerimientos funcionales y no funcionales. La correcta identificación y documentación de estos requerimientos son fundamentales para evitar malosentendidos y garantizar que el desarrollo se alinee con las necesidades del cliente.
 		
+		El \textbf{diagrama de casos de uso} es un diagrama uml (lenguaje de modelado unificado) que, a través de una representación gráfica del sistema, permite modelar los requerimientos funcionales de una aplicación, mostrándolos desde el punto de vista del usuario. Estos diagramas tienen dos funciones importantes: 1) capturar los requisitos funcionales del sistema y 2) simplificar la construcción de los modelos de objetos. Estos diagramas son útiles también para que los usuarios realicen retroalimentación en la especificación de requerimientos, son insumos para posteriores etapas del ciclo de vida e incluso se utilizan como herramienta para la reingeniería de procesos \parencite{patino2022ElaDiag}.
+		
+		En la tabla \ref{tab:tabla2_1} se observan los elementos de un diagrama de casos de uso.
+		
+		\begin{longtable}{>{\centering\arraybackslash}m{2.5cm} >{\centering\arraybackslash}m{8cm} >{\centering\arraybackslash}m{4cm}}
+			\caption[Elementos de un diagrama de casos de uso]{\newline Elementos de un Diagrama de casos de uso} \label{tab:tabla2_1}\\
+			\toprule
+			\textbf{Elemento} & \textbf{Definición} & \textbf{Símbolo}\\
+			\midrule
+			\endfirsthead
+			
+			\toprule
+			\textbf{Elemento} & \textbf{Definición} & \textbf{Símbolo}\\
+			\midrule
+			\endhead
+			
+			\midrule
+			\multicolumn{3}{r}{\textit{Continúa en la siguiente página}} \\
+			\midrule
+			\endfoot
+			
+			\bottomrule
+			\endlastfoot
+			
+			% Aquí se colocan las filas de la tabla, por ejemplo:
+			Caso de uso	&  Representa el requisito funcional del sistema y describe un servicio prestado por el sistema. & \includegraphics[width=0.15\textwidth]{imagenes/diagramas_casos_de_uso/diagrama-de-caso-de-uso.png} \\
+			Actores		& Un actor representa cualquier objeto que intercambia información 
+			con el sistema. & \includegraphics[width=0.08\textwidth]{imagenes/diagramas_casos_de_uso/diagrama-de-caso-de-uso-actor.png} \\
+			Relaciones	& Son asociaciones entre los casos de uso y los actores o entre casos de uso.  & \includegraphics[width=0.25\textwidth]{imagenes/diagramas_casos_de_uso/diagrama-de-caso-de-uso-relaciones.png} \\
+			Límite del sistema &  Representa la frontera entre el sistema (funcionalidades) y los usuarios (actores). & \includegraphics[width=0.10\textwidth]{imagenes/diagramas_casos_de_uso/diagrama-de-caso-de-uso-limite.png} \\
+			
+		\end{longtable}
+		\vspace{-12pt}  % O el valor que necesites para ajustar
+		% Nota personalizada fuera de `\caption*{}`
+		% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
+		En la figura \ref{fig:figura_caso_uso} se ve un diagrama de casos de uso para un sistema de venta de pasajes que muestra la interacción entre dos actores principales (Cliente y Vendedor) con cuatro funcionalidades básicas del sistema representadas como casos de uso (Consultar horarios, Reservar asiento, Pagar pasaje y Emitir boleto), donde las líneas conectoras indican que el Cliente puede consultar horarios, reservar y pagar, mientras que el Vendedor puede reservar, cobrar y emitir el boleto, todo esto encerrado dentro de un rectángulo que representa los límites del sistema.
+		
+		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+		
+		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo Diagrama de casos de uso]
+			{\newline Ejemplo de Diagrama de casos de uso.} % Leyenda en la parte superior
+			\vspace{0.3cm}
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagenes/diagramas_casos_de_uso/venta-pasajes-casos-uso.png} % Inserta una imagen
+			\vspace{0.3cm}
+			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
+			\vspace{-0.6cm}
+			\label{fig:figura_caso_uso} % Etiqueta para referencia cruzada
+		\end{figure}		
+		
 		El análisis también juega un papel esencial en la gestión del cambio, ya que a medida que se desarrolla el proyecto, pueden surgir nuevas necesidades o cambios en las prioridades del cliente. Por ello, es vital mantener una comunicación constante con las partes interesadas para ajustar los requerimientos de manera oportuna. A través de un análisis cuidadoso y dinámico, se pueden prevenir desviaciones en el proyecto y asegurar que el producto final se entregue dentro de los plazos y presupuestos establecidos.\\
 		\textbf{Paso 3: Especificación de requerimientos}
 		
 		La especificación de requerimientos en el proceso de ingeniería de software, se trata de documentar y formalizar los requerimientos identificados durante la etapa de análisis. De acuerdo a \textcite{sommerville2011introduccion}, esta fase implica la creación de un documento que sirva como un contrato entre los desarrolladores y los interesados en el proyecto, asegurando que todas las partes tengan una comprensión clara de lo que se espera del sistema. La especificación debe ser clara, completa y comprensible, lo que facilita su uso como guía para el diseño, desarrollo y pruebas del software.
 		
-		Uno de los enfoques más utilizados en la especificación de requerimientos es el uso de historias de usuario, que permiten capturar las necesidades desde la perspectiva del usuario. Estas historias son breves descripciones que explican cómo un usuario interactuará con el sistema para lograr un objetivo específico. Según \textcite{cohn2004user}, este enfoque promueve una mejor comunicación entre los desarrolladores y los usuarios, ayuda a garantizar que se prioricen las características más valiosas del software. Además, las historias de usuario son fácilmente comprensibles, lo que las hace accesibles incluso para aquellos que no tienen un trasfondo técnico.
-		
-		Además de las historias de usuario, es común utilizar diagramas de casos de uso y modelos de datos para complementar la documentación de requerimientos. Los diagramas de casos de uso, como los propuestos por \textcite{booch2007object}, visualizan las interacciones entre los actores (usuarios o sistemas externos) y el sistema en desarrollo, ayudando a identificar las funcionalidades clave que deben implementarse. Por otro lado, los modelos de datos permiten definir la estructura de la información que el sistema gestionará, proporcionando una visión más profunda sobre cómo se relacionan los diferentes componentes de la aplicación.
+		La especificación se basa en un conjunto de descripciones detalladas que abordan cada requisito de manera integral y verificable. Descripción del sistema, propósito, alcance, entradas y salidas esperadas, limitaciones técnicas y operativas. La documentación debe ser clara para evitar cualquier ambigüedad o errores de implementación que puedan afectar el rendimiento del sistema \parencite{pressman2010ingenieria}. Una buena documentación de requisitos ayuda a verificar y validar posteriormente, asegurando que el sistema esté alineado tanto con los requisitos del usuario como con los objetivos de la organización. 
+
+		Es fundamental describir todos los requisitos de forma breve y estandarizada para que durante el desarrollo se pueda entender y utilizar fácilmente. Una jerarquía de documentación es una buena solución para proyectos complejos, ya que permite un seguimiento y control de los cambios más sencillo, lo que da como resultado una gestión más eficiente y organizada del desarrollo de software. Un desglose detallado de los criterios de aceptación de cada requisito para garantizar que cumplen con los estándares y objetivos establecidos, y verificarlos con precisión al final de la fase de desarrollo.
 		
 		La especificación de requerimientos no es una actividad única; debe revisarse y actualizarse a medida que el proyecto avanza y se generan nuevos conocimientos. La inclusión de un proceso de revisión regular garantiza que los requerimientos sigan siendo relevantes y se adapten a cualquier cambio en las necesidades del negocio o en la tecnología disponible. Esta flexibilidad es esencial para el éxito del proyecto, ya que contribuye a la satisfacción del cliente y a la eficacia del equipo de desarrollo, minimizando el riesgo de retrabajo y asegurando una entrega más oportuna del producto final.\\
 		\textbf{Paso 4: Validación de requerimientos}
@@ -357,6 +393,8 @@
 		Finalmente, la gestión de requerimientos también implica asegurar que la documentación de los requerimientos esté actualizada y disponible para todos. Mantener una buena comunicación y visibilidad sobre el estado de los requerimientos es fundamental para que los desarrolladores puedan alinearse con los objetivos del proyecto. Así, una correcta gestión de requerimientos contribuye a minimizar riesgos, optimizar recursos y garantizar el éxito del desarrollo del software.
 				
 	\section{MODELO ENTIDAD - RELACIÓN}
+		Conforme a la segunda etapa del modelo en cascada, en su punto \ref{subsec:Dis_sis_softwa}, se aborda el diseño de la base de datos, que es fundamental para la estructuración y almacenamiento eficiente de la información del sistema.
+		
 		El modelo entidad-relación (ER) es una herramienta fundamental en el diseño de bases de datos, que se utiliza para representar de manera gráfica la estructura de los datos y las relaciones entre ellos. Propuesto por Peter Chen en 1976, este modelo permite a los diseñadores de bases de datos conceptualizar y organizar la información de manera intuitiva, facilitando la comprensión de los requisitos del sistema antes de la implementación de la base de datos \parencite{theentity1976Chen}.
 		
 	\subsection{Componentes del modelo}
@@ -385,7 +423,7 @@
 		
 		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
 			\caption[Ejemplo MER]
-			{\newline Ejemplo de modelo entidad-relación.} % Leyenda en la parte superior
+			{\newline Ejemplo de Modelo entidad-relación.} % Leyenda en la parte superior
 			\vspace{0.3cm}
 			\centering
 			\includegraphics[width=0.9\textwidth]{imagenes/figura2_3.png} % Inserta una imagen
@@ -408,13 +446,57 @@
 	\subsection{Normalización}
 		La normalización es el proceso de organización de una base de datos para reducir la redundancia y mejorar la integridad de los datos. Las formas normales más comunes son:
 		
-		Primera Forma Normal (1FN): Una tabla está en 1FN si todos sus atributos contienen valores atómicos (indivisibles) y cada entrada de la tabla tiene un único valor por columna. Es decir, no debe haber grupos repetidos ni atributos con listas de valores.
+		Primera Forma Normal (1FN): Una tabla está en 1FN si todos sus atributos contienen valores atómicos (indivisibles) y cada entrada de la tabla tiene un único valor por columna. Es decir, no debe haber grupos repetidos ni atributos con listas de valores, como se puede ver en la figura \ref{fig:figura_1FN}
 		
-		Segunda Forma Normal (2FN): Para estar en 2FN, una tabla debe cumplir con la 1FN y, además, todos los atributos no clave deben depender completamente de la clave primaria. En otras palabras, elimina la dependencia parcial de los atributos en caso de que la clave primaria sea compuesta.
+		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 		
-		Tercera Forma Normal (3FN): Una tabla está en 3FN si cumple con 2FN y no tiene dependencias transitivas. Esto significa que los atributos no clave no dependen de otros atributos no clave.
+		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo 1FN]
+			{\newline Ejemplo de Primera Forma Normal} % Leyenda en la parte superior
+			\vspace{-0.2cm}
+			\centering
+			\includegraphics[width=0.7\textwidth]{imagenes/normalizacion/1FN.png} % Inserta una imagen
+			\vspace{0.3cm}
+			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
+			\vspace{-0.6cm}
+			\label{fig:figura_1FN} % Etiqueta para referencia cruzada
+		\end{figure}
+		
+		Segunda Forma Normal (2FN): Para estar en 2FN, una tabla debe cumplir con la 1FN y, además, todos los atributos no clave deben depender completamente de la clave primaria. En otras palabras, elimina la dependencia parcial de los atributos en caso de que la clave primaria sea compuesta, a continuación en la figura \ref{fig:figura_2FN} observamos un ejemplo.
+		
+		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+		
+		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo 1FN]
+			{\newline Ejemplo de Segunda Forma Normal} % Leyenda en la parte superior
+			\vspace{0.2cm}
+			\centering
+			\includegraphics[width=0.70\textwidth]{imagenes/normalizacion/2FN.png} % Inserta una imagen
+			\vspace{0.3cm}
+			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
+			\vspace{-0.6cm}
+			\label{fig:figura_2FN} % Etiqueta para referencia cruzada
+		\end{figure}
+		
+		Tercera Forma Normal (3FN): Una tabla está en 3FN si cumple con 2FN y no tiene dependencias transitivas. Esto significa que los atributos no clave no dependen de otros atributos no clave, asi como se observa en la figura \ref{fig:figura_3FN}.
+		
+		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+		
+		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo 1FN]
+			{\newline Ejemplo de Tercera Forma Normal} % Leyenda en la parte superior
+			\vspace{0.2cm}
+			\centering
+			\includegraphics[width=0.6\textwidth]{imagenes/normalizacion/3FN.png} % Inserta una imagen
+			\vspace{0.3cm}
+			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
+			\vspace{-0.6cm}
+			\label{fig:figura_3FN} % Etiqueta para referencia cruzada
+		\end{figure}
 		
 	\section{PATRÓN DE DISEÑO WEB}
+		De acuerdo con el modelo en cascada, en su segunda etapa, que corresponde al punto \ref{subsec:Dis_sis_softwa} sobre el Diseño del sistema y del software, en esta etapa se desarrolla también el diseño de la interfaz, que será el medio principal de interacción del usuario con el sistema."
+		
 		Los patrones de diseño web se refieren a un conjunto de principios que guían el desarrollo de páginas web y la creación de interfaces de usuario, abarcando desde elementos individuales hasta componentes más completos. A diferencia de las plantillas, que sirven como un punto de partida para diseñar páginas con una estructura similar pero con contenidos distintos, los patrones ofrecen un enfoque basado en buenas prácticas para el diseño. Utilizar estos patrones conlleva dos beneficios clave:
 		
 		Primero, aseguran una experiencia de usuario óptima al proporcionar directrices sobre la disposición y organización de los distintos elementos en una página, adaptándose así a las necesidades y expectativas de los usuarios.
@@ -471,13 +553,11 @@
 		
 		La elección de un patrón de arquitectura adecuado influye en la calidad del software, su rendimiento y su facilidad de uso, el uso de patrones de arquitectura ayuda a los desarrolladores a afrontar la complejidad del software mediante la identificación de soluciones probadas y confiables, lo que contribuye a un desarrollo más ágil y eficiente. Este enfoque permite que los equipos de desarrollo colaboren de manera más efectiva, al tener una base común sobre la cual construir.
 		
-		Un patrón particularmente relevante en el desarrollo web es el Modelo-Vista-Controlador (MVC). Este patrón separa la lógica de negocio, la presentación y el control, permitiendo una mayor modularidad y flexibilidad en el diseño de aplicaciones web. 
+		Un patrón particularmente relevante en el desarrollo web es el Model-Template-View (MTV). Este patrón se adapta a las necesidades específicas de diferentes frameworks y lenguajes de programación. permitiendo una mayor modularidad y flexibilidad en el diseño de aplicaciones web. 
 		
-	\section{PATRÓN MODELO-TEMPLATE-VIEW (MTV)}
+	\section{PATRÓN MODEL-TEMPLATE-VIEW (MTV)}
 		
-		A partir del patrón MVC, han surgido variaciones adaptadas a las necesidades específicas de diferentes frameworks y lenguajes de programación. Una de estas variaciones es el patrón Modelo-Template-View (MTV), es un framework de desarrollo web de código abierto escrito en Python.
-		
-		El patrón MTV tiene la particularidad de separar claramente la lógica de la aplicación en tres componentes principales:
+		El patrón Model-Template-View (MTV), es un framework de desarrollo web de código abierto escrito en el lenguaje de programación Python. El patrón MTV tiene la particularidad de separar claramente la lógica de la aplicación en tres componentes principales:
 		
 		\begin{itemize}[label=$\bullet$, left=0cm, labelsep = 1.05cm, topsep = 0pt, parsep = 0pt]
 			\item \textbf{Model (Modelo)}: se refiere a la estructura de datos en Django, se define esta estructura creando una clase por cada tabla en la base de datos. Cada modelo de Django contiene los campos y comportamientos de los datos que desea almacenar.
@@ -488,10 +568,10 @@
 		La aplicación del patrón MTV en Django facilita la separación de responsabilidades, mejorando la mantenibilidad y la escalabilidad del sistema. Esta separación también permite que diferentes equipos puedan trabajar de manera independiente sobre cada componente, favoreciendo una mayor eficiencia en el desarrollo.		
 	
 	\section{HERRAMIENTAS DE DESARROLLO}
-		En la tabla \ref{tab:tabla2_1}, tabla \ref{tab:tabla2_2} y tabla \ref{tab:tabla2_3} se identifican las herramientas de desarrollo que se utilizan para el proyecto.
+		En la tabla \ref{tab:tabla2_2}, tabla \ref{tab:tabla2_3} y tabla \ref{tab:tabla2_4} se identifican las herramientas de desarrollo que se utilizan para el proyecto.
 		
 		\begin{longtable}{>{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{5cm} >{\centering\arraybackslash}m{3cm}}
-			\caption[Herramientas front-end]{\newline Herramientas a utilizar en el desarrollo del front-end del proyecto} \label{tab:tabla2_1}\\
+			\caption[Herramientas front-end]{\newline Herramientas a utilizar en el desarrollo del front-end del proyecto} \label{tab:tabla2_2}\\
 			\toprule
 			\textbf{Logo} & \textbf{Herramienta} & \textbf{Versión}\\
 			\midrule
@@ -513,8 +593,8 @@
 			% Aquí se colocan las filas de la tabla, por ejemplo:
 			\includegraphics[width=0.05\textwidth]{imagenes/logos/html.png}       & HTML & 5 \\
 			\includegraphics[width=0.05\textwidth]{imagenes/logos/css.png}       & CSS & 3 \\
-			\includegraphics[width=0.08\textwidth]{imagenes/logos/javascript.png}       & JavaScript & 6 \\
-			\includegraphics[width=0.09\textwidth]{imagenes/logos/bootstrap.png}       & Framework Bootstrap & 4 \\
+			\includegraphics[width=0.08\textwidth]{imagenes/logos/javascript.png}       & JavaScript & ES14 \\
+			\includegraphics[width=0.09\textwidth]{imagenes/logos/bootstrap.png}       & Framework Bootstrap & 4.4 \\
 			
 		\end{longtable}
 		\vspace{-12pt}  % O el valor que necesites para ajustar
@@ -522,7 +602,7 @@
 		% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
 					
 		\begin{longtable}{>{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{5cm} >{\centering\arraybackslash}m{3cm}}
-			\caption[Herramientas back-end]{\newline Herramientas a utilizar en el desarrollo del back-end del proyecto} \label{tab:tabla2_2}\\
+			\caption[Herramientas back-end]{\newline Herramientas a utilizar en el desarrollo del back-end del proyecto} \label{tab:tabla2_3}\\
 			\toprule
 			\textbf{Logo} & \textbf{Herramienta} & \textbf{Versión}\\
 			\midrule
@@ -543,7 +623,7 @@
 			
 			% Aquí se colocan las filas de la tabla, por ejemplo:
 			\includegraphics[width=0.07\textwidth]{imagenes/logos/python.png}       & Python & 3.12.5 \\
-			\includegraphics[width=0.13\textwidth]{imagenes/logos/django.png}       & Framework Django & 5.11 \\
+			\includegraphics[width=0.13\textwidth]{imagenes/logos/django.png}       & Framework Django & 5.1.1 \\
 			\includegraphics[width=0.08\textwidth]{imagenes/logos/postgre.png}       & PostgreSQL & 16.3 \\
 			\includegraphics[width=0.15\textwidth]{imagenes/logos/pgadmin.png}       & pgAdmin & 4 \\
 			
@@ -553,7 +633,7 @@
 		% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
 				
 		\begin{longtable}{>{\centering\arraybackslash}m{3cm} >{\centering\arraybackslash}m{5cm} >{\centering\arraybackslash}m{3cm}}
-			\caption[Herramientas de programación]{\newline Herramientas a utilizar en programación y el control de versiones del proyecto} \label{tab:tabla2_3}\\
+			\caption[Herramientas de programación]{\newline Herramientas a utilizar en programación y el control de versiones del proyecto} \label{tab:tabla2_4}\\
 			\toprule
 			\textbf{Logo} & \textbf{Herramienta} & \textbf{Versión}\\
 			\midrule
@@ -573,7 +653,7 @@
 			\endlastfoot
 			
 			% Aquí se colocan las filas de la tabla, por ejemplo:
-			\includegraphics[width=0.1\textwidth]{imagenes/logos/vscode.png}       & Visual Studio Code & 1.94.2 \\
+			\includegraphics[width=0.08\textwidth]{imagenes/logos/vscode.png}       & Visual Studio Code & 1.94.2 \\
 			\includegraphics[width=0.07\textwidth]{imagenes/logos/github.png}       & Github & 2.46.1 \\	
 			
 		\end{longtable}
@@ -582,10 +662,91 @@
 		% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
 		
 	\section{PRUEBAS}
-	\section{MODELO DE CALIDAD BOEHM}
+		La etapa de pruebas se realiza para identificar, corregir errores y asegurar que el sistema funcione según las especificaciones planteadas en los requerimientos. De acuerdo con \textcite{sommerville2011introduccion}, las pruebas de software deben ser meticulosas, comprobando tanto las funciones internas del sistema como su comportamiento desde la perspectiva del usuario final. Las pruebas no solo permiten detectar defectos, sino también asegurar que el software opere correctamente en diferentes escenarios, reduciendo el riesgo de errores que afecten la experiencia del usuario o la operación de la empresa.
 		
-	
-	
+		\textcite{sommerville2011introduccion} clasifica las pruebas de software en cuatro categorías principales: pruebas unitarias, pruebas de integración, pruebas de sistema y pruebas de aceptación.
+		
+	\subsection{Pruebas unitarias}
+		Las pruebas unitarias verifican el funcionamiento de las partes más pequeñas del software, llamadas "unidades". Cada unidad, generalmente una función o un módulo, se prueba de forma aislada para asegurar que su comportamiento sea correcto. Como destaca \textcite{pressman2010ingenieria}, estas pruebas son fundamentales para detectar errores en los componentes básicos del sistema, lo cual facilita una construcción más sólida del sistema completo.
+	\subsection{Pruebas integración}
+		Una vez que los módulos individuales son validados, las pruebas de integración examinan cómo interactúan entre sí. Según \textcite{sommerville2011introduccion}, en esta fase se detectan problemas en la comunicación y la interoperabilidad de las distintas partes del software, estas pruebas buscan identificar problemas que surgen cuando se combinan los distintos componentes, como incompatibilidades de interfaces o errores de comunicación. 
+	\subsection{Pruebas de sistema}
+		Las pruebas de sistema analizan el software en su totalidad, evaluando si cumple con todos los requerimientos funcionales y no funcionales. Estas pruebas se realizan en un entorno que simula el real, evaluando factores como el rendimiento y la seguridad.
+	\subsection{Pruebas de aceptación}
+		Las pruebas de aceptación tienen como objetivo validar que el software cumple con los requisitos del cliente, estas pruebas se realizan con la participación de los usuarios finales, quienes validan que el sistema funcione según lo esperado y satisfaga sus necesidades. A diferencia de los tipos de pruebas anteriores, las pruebas de aceptación no se automatizan, sino que se llevan a cabo mediante protocolos de prueba específicos.	
+	\section{MODELO DE CALIDAD BOEHM}
+		El modelo de calidad de Boehm fue propuesto por Barry Boehm en los años 70 como un enfoque exhaustivo para evaluar la calidad del software de forma estructurada. Su objetivo principal es ofrecer un marco de referencia que descompone el concepto de calidad en atributos y sub-atributos específicos, permitiendo a los ingenieros de software identificar y medir aspectos clave para mejorar la calidad del software desarrollado. Según \textcite{pressman2010ingenieria}, este modelo proporciona una guía que facilita el cumplimiento de los objetivos de calidad, estableciendo métricas y criterios que ayudan en la toma de decisiones a lo largo del proceso de desarrollo.
+	\subsection{Estructura jerárquica del modelo de calidad Boehm}
+		El Modelo de Calidad de Boehm establece un marco de trabajo para evaluar la calidad de un software mediante una estructura jerárquica de características. En la figura \ref{fig:figura_est_boehm}, el modelo se organiza en tres niveles: usos primarios, constructores intermedios y constructores primitivos. Cada uno de estos niveles desglosa aspectos de la calidad que se vuelven más específicos a medida que se profundiza en la jerarquía.
+				
+		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Estructura jerárquica del Modelo de Calidad Boehm]
+			{\newline Estructura jerárquica del Modelo de Calidad Boehm} % Leyenda en la parte superior
+			\vspace{0.3cm}
+			\centering
+			\includegraphics[width=0.9\textwidth]{imagenes/est_boehm.png} % Inserta una imagen
+			\vspace{0.3cm}
+			\caption*{\textup{\textbf{Nota}: Obtenido de https://evaluacionred-g3-2019.fandom.com/}}
+			\vspace{-0.8cm}
+			\label{fig:figura_est_boehm} % Etiqueta para referencia cruzada
+		\end{figure}
+		
+		En el primer nivel define tres utilidades como factores para la calidad del software que son las siguientes: 
+		
+		1) Utilidad del software tal y como está en el momento de la evaluación, identificar la 
+		facilidad de uso, fiabilidad y eficiencia.
+		
+		2) La facilidad de mantenimiento identificar lo que es modificable para realizar sus 
+		modificaciones pertinentes y las pruebas adecuadas.
+		
+		3) Portabilidad facilidad que tiene el software de ser utilizado en entorno distinto.
+		
+		En el segundo nivel, los constructores intermedios son características técnicas que impactan directamente los usos primarios. En este nivel, se consideran elementos como portabilidad, confiabilidad, eficiencia, ingeniería social (seguridad) y entendibilidad.
+		
+		Portabilidad: La capacidad del software para funcionar en distintos entornos o plataformas sin necesidad de cambios significativos.
+		
+		Confiabilidad: Define la estabilidad y seguridad del sistema, asegurando que cumple sus funciones sin fallos y resiste condiciones inesperadas.
+		
+		Eficiencia: Enfoca el uso adecuado de los recursos, optimizando tiempos de respuesta y el uso de memoria.
+		
+		Ingeniería Social (Seguridad): Evalúa las medidas implementadas para proteger el sistema de amenazas externas y salvaguardar los datos de los usuarios.
+		
+		Entendibilidad: La facilidad con la que los desarrolladores pueden comprender el código o la arquitectura del software para realizar modificaciones.
+		
+		Modificabilidad: Posibilita cambios y adaptaciones en el software
+		
+		Y por último en el tercer nivel, los constructores primitivos son métricas y atributos básicos que sirven como fundamentos para los constructores intermedios. En esta categoría se incluyen aspectos como independencia de dispositivo, ser contenedores, precisión, completitud, integridad, compatibilidad, accesibilidad y claridad.
+		
+		Independencia de Dispositivo: La capacidad del sistema para operar en múltiples dispositivos sin problemas.
+		
+		Ser contenedores: Habilidad para encapsular y gestionar recursos
+		
+		Precisión: Exactitud en los resultados y operaciones.
+		
+		Completitud: Implementación total de funcionalidades requeridas.
+		
+		Integridad: Garantiza la seguridad y protección de la información contra accesos no autorizados o fallos.
+		
+		Consistencia: Uniformidad en el comportamiento.
+		
+		Compatibilidad: Interoperabilidad con otros sistemas.
+		
+		Eficiencia del dispositivo: Optimización de recursos hardware.
+		
+		Accesibilidad: Facilidad de uso para diferentes usuarios.
+		
+		Comunicación: Claridad en la interacción sistema-usuario.
+		
+		Claridad: Facilidad de comprensión del código.
+		
+		Estructuración: Organización lógica del software.
+		
+		Consistencia: Uniformidad en el diseño y desarrollo.
+		
+		Legalidad: Cumplimiento de normativas y estándares.
+		
+		Crecimiento: Capacidad de expansión y escalabilidad.
+		
 
 	
 	

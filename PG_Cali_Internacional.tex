@@ -76,14 +76,6 @@
 	pdfborder={0 0 0}, % Desactiva los cuadros alrededor de los enlaces
 }
 
-% Configuración de leyendas según APA 7
-%\captionsetup{
-%	format=plain,        % Formato de leyenda simple
-%	labelfont=bf,        % Fuente en negrita para etiquetas
-%	textfont=it,         % Fuente en cursiva para texto
-%	labelsep=period,     % Separador es un punto
-%}
-
 \captionsetup[figure]{
 	margin={1.27cm,0cm},
 	justification=RaggedRight, % Alineación a la izquierda
@@ -115,11 +107,6 @@
 	skip=17pt          % Sin espacio entre la leyenda y la tabla
 }
 
-% Configuración de la Lista de índices
-% Cambiar el nombre de "Índice de Figuras" y centrarlo en mayúsculas
-% \renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
-
-% Modificar el formato del índice de figuras
 \makeatletter
 \renewcommand\listoffigures{%
 	\chapter*{\hfill\bfseries\normalsize ÍNDICE DE FIGURAS\hfill} % Título centrado
@@ -158,11 +145,11 @@
 	\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
 	
 	% Índice de Figuras
-	\listoffigures
+	% \listoffigures
 	
 	
 	% Índice de Tablas
-	\listoftables
+	% \listoftables
 	
 	\mainmatter
 	% Introduccción
