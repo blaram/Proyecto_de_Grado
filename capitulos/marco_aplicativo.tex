@@ -39,6 +39,32 @@
 	\vspace{-12pt}  % O el valor que necesites para ajustar
 	% Nota personalizada fuera de `\caption*{}`
 	% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
+	Como parte inicial al proceso de levantamiento de requerimientos se realizó la \textbf{técnica de observación directa} sobre las operaciones diarias en la empresa de transportes durante la semana del 12 al 16 de agosto de 2024. Esta técnica permitió identificar puntos críticos iniciales para preparar las entrevistas posteriores al personal de la empresa.
+	
+	Durante la observación se identificaron los siguientes aspectos:
+	
+	\begin{enumerate}[left=0.1cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
+		\item Procesos que requieren optimización:
+		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
+			\item Verificación de disponibilidad de asientos
+			\item Registro de encomiendas
+			\item Control de embarque de pasajeros
+			\item Gestión de caja y turnos
+		\end{itemize}		
+		\item Puntos críticos identificados:
+		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
+			\item Tiempos de espera prolongados en horas pico
+			\item Proceso manual propenso a errores
+			\item Falta de información en tiempo real
+		\end{itemize}
+		\item Oportunidades de mejora:
+		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
+			\item Automatización del proceso de venta
+			\item Gestión digital de asientos
+			\item Control automatizado de embarque
+		\end{itemize}
+	\end{enumerate}
+		
 	Las entrevistas fueron programadas en base al cronograma detallado en la tabla \ref{tab:tabla3_1}, logrando reuniones efectivas tanto con el administrador y con el personal de atención al cliente. A continuación, se detallan las consultas realizadas en estas sesiones.
 		
 	\textbf{Entrevista al Administrador}
@@ -46,7 +72,7 @@
 	Información del Entrevistado
 	\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
 		\item Cargo: Administrador General
-		\item Fecha: 9/8/2024
+		\item Fecha: 23/8/2024
 		\item Lugar: Empresa de Transportes Cali Internacional
 		\item Duración estimada: 60 minutos
 	\end{itemize}
@@ -77,7 +103,7 @@
 	Información del Entrevistado
 	\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
 		\item Vendedor de pasajes y recepcionista de encomiendas
-		\item Fecha: 9/8/2024
+		\item Fecha: 23/8/2024
 		\item Lugar: Empresa de Transportes Cali Internacional
 		\item Duración estimada: 60 minutos
 	\end{itemize}
@@ -108,41 +134,15 @@
 		\item ¿Qué información proporciona a los clientes sobre el viaje?
 	\end{enumerate}
 	
-	Como parte complementaria al proceso de entrevistas, se realizó también la \textbf{técnica de observación directa} de las operaciones diarias en la empresa de transportes durante la semana del 12 al 16 de agosto de 2024. Esta técnica permitió identificar aspectos que no fueron mencionados durante las entrevistas y validar la información proporcionada por el personal.
+	Las entrevistas permiten complementar la información obtenida en la observación directa y proporcionar una visión más clara de los procesos actuales y las necesidades reales de automatización.	
 	
-	Durante la observación se identificaron los siguientes aspectos:
-	
-	\begin{enumerate}[left=0.1cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
-		\item Procesos que requieren optimización:
-		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
-			\item Verificación de disponibilidad de asientos
-			\item Registro de encomiendas
-			\item Control de embarque de pasajeros
-			\item Gestión de caja y turnos
-		\end{itemize}		
-		\item Puntos críticos identificados:
-		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
-			\item Tiempos de espera prolongados en horas pico
-			\item Proceso manual propenso a errores
-			\item Falta de información en tiempo real
-		\end{itemize}
-		\item Oportunidades de mejora:
-		\begin{itemize}[label=$-$, left=0cm, labelsep = 0.9cm, topsep = 0pt, parsep = 0pt]
-			\item Automatización del proceso de venta
-			\item Gestión digital de asientos
-			\item Control automatizado de embarque
-		\end{itemize}
-	\end{enumerate}
-	
-	La observación directa permitió complementar la información obtenida en las entrevistas y proporcionó una visión más clara de los procesos actuales y las necesidades reales de automatización.
-
 	\subsection{Análisis de requerimientos}
 	Durante la fase de Análisis de requerimientos del proyecto, se realizó un proceso integro para definir y estructurar los casos de uso que abarcarán las funcionalidades esenciales del sistema, esta etapa se centró en organizar las interacciones clave que los usuarios tendrán con el sistema, permitiendo establecer una visión clara de cómo deben funcionar los distintos módulos.
 	
 	En esta fase se realizó la organización y documentación de los casos de uso, lo que facilitó el establecimiento de una visión clara de las funcionalidades a desarrollar, se logró crear una especificación detallada de cada caso de uso, incluyendo actores, flujos principales, flujos alternativos y condiciones específicas de ejecución. Este nivel de detalle proporciona una guía clara para las fases subsecuentes del proyecto, también permite establecer un entendimiento común con los interesados sobre cómo el sistema debe comportarse ante las diferentes interacciones de los usuarios.\\
 	\textbf{Diagrama de casos de uso}
 		
-	De acuerdo al análisis de requerimientos en la figura \ref{fig:caso_uso}, se presenta el Diagrama de casos de uso identificados para el sistema.
+	De acuerdo al análisis de requerimientos en la figura \ref{fig:caso_uso}, se presenta el Diagrama de casos de uso para el sistema.
 	
 	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
 		\caption[Diagrama de Casos de Uso]
@@ -625,23 +625,264 @@
 	\textbf{Requerimientos funcionales} \\		
 	\textbf{RF-01:} El sistema contará con un módulo de gestión de perfiles de usuarios, distinguiendo entre administradores y empleados. \\	
 	\textbf{RF-02:} El sistema permitirá la gestión de rutas y horarios de los servicios de transporte. \\	
-	\textbf{RF-03:} El sistema contará con un módulo de venta y reserva de boletos para los usuarios. \\	
+	\textbf{RF-03:} El sistema contará con un módulo de venta y reserva de pasajes para los usuarios. \\	
 	\textbf{RF-04:} El sistema realizará la asignación de asientos en los vehículos de transporte. \\	
-	\textbf{RF-05:} El sistema permitirá el registro y seguimiento de las encomiendas transportadas. \\	
+	\textbf{RF-05:} El sistema permitirá el registro de las encomiendas transportadas. \\	
 	\textbf{RF-06:} El sistema gestionará la flota de buses, incluyendo información de los vehículos y conductores. \\	
-	\textbf{RF-07:} El sistema generará reportes de ventas y otros indicadores clave del negocio.\\
+	\textbf{RF-07:} Compatibilidad con navegadores web modernos (Chrome, Firefox, Safari, Edge).\\
 	\textbf{Requerimientos no funcionales} \\	
-	\textbf{RNF-01:} El sistema debe ser accesible desde múltiples dispositivos (computadoras, tablets y móviles). \\	
-	\textbf{RNF-02:} Garantizar la protección de los datos de los usuarios mediante protocolos de seguridad adecuados. \\	
-	\textbf{RNF-03:} Escalabilidad, capacidad de crecer para manejar aumento en usuarios y transacciones. \\	
-	\textbf{RNF-04:} Mantenibilidad, arquitectura modular para facilitar actualizaciones
+	\textbf{RNF-01:} El sistema debe ser accesible desde múltiples navegadores y celulares. \\	
+	\textbf{RNF-02:} Capacidad de exportar reportes en formatos estándar (PDF, CSV, Excel). \\	
+	\textbf{RNF-03:} Arquitectura de software modular y escalable para facilitar actualizaciones.
 		
-	\subsection{Validación de requerimientos}
-	
+	\subsection{Gestión de requerimientos}
+	En esta etapa del proyecto, presentamos los diagramas de actividades que se utilizan para representar los flujos de trabajo relacionados con el manejo y control de los requerimientos. Estos diagramas permiten visualizar las acciones y decisiones necesarias para asegurar que los requerimientos sean gestionados de manera eficiente, alineados con los objetivos del sistema y comunicados correctamente a los interesados. A continuación, en las figuras \ref{fig:DA_ingreso}, \ref{fig:DA_registro}, \ref{fig:DA_pasajes} y \ref{fig:DA_encomiendas}, se muestran los diagramas correspondientes.
 
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama de actividades - Ingresar al sistema]
+		{\newline Proceso Ingresar al sistema.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.5\textwidth]{imagenes/cap_3/ingreso.drawio.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:DA_ingreso} % Etiqueta para referencia cruzada
+	\end{figure}
+
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama de actividades - Venta pasajes]
+		{\newline Proceso Venta y reserva de pasajes .} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.9\textwidth]{imagenes/cap_3/pasaje.drawio.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:DA_pasajes} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama de actividades - Registro de encomiendas]
+		{\newline Proceso Registro envío de encomiendas.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.9\textwidth]{imagenes/cap_3/encomiendas.drawio.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:DA_encomiendas} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama de actividades - Registro de personal]
+		{\newline Proceso Registro de personal - clientes.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.5\textwidth]{imagenes/cap_3/registro.drawio.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:DA_registro} % Etiqueta para referencia cruzada
+	\end{figure}
 
 \section{DISEÑO DEL SISTEMA Y DEL SOFTWARE}
+	Para el modelado de datos ahora se procede a realizar el modelo entidad - relación que permite visualizar la estructura inicial de la base de datos.
+	\subsection{Diagrama entidad - relación}
+	En la figura \ref{fig:ent_atri} se muestran las entidades del sistema con su estructura interna detallada. Cada entidad se representa con sus atributos específicos, donde se distinguen las claves primarias y los atributos descriptivos, estableciendo así la base para el almacenamiento de la información del sistema.
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama Entidad-Relación ]
+		{\newline Diagrama Entidad-Relación (Entidades y atributos)} % Leyenda en la parte superior
+		\vspace{0.3cm}
+		\centering
+		\includegraphics[width=1\textwidth]{imagenes/cap_3/MER_ent_atri.png} % Inserta una imagen
+		\vspace{0.3cm}
+		%\caption*{\textup{\textbf{Nota}: Obtenido de https://evaluacionred-g3-2019.fandom.com/}}
+		\vspace{-0.8cm}
+		\label{fig:ent_atri} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	La figura \ref{fig:MER_com} representa el modelo entidad-relación completo, donde se visualizan las conexiones entre las diferentes entidades del sistema. Las líneas de relación muestran cómo las entidades interactúan entre sí, y la cardinalidad especificada en cada relación define las reglas de negocio y las restricciones del sistema.
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama Entidad-Relación ]
+		{\newline Diagrama Entidad-Relación} % Leyenda en la parte superior
+		\vspace{0.3cm}
+		\centering
+		\includegraphics[width=1\textwidth]{imagenes/cap_3/MER_cali.drawio_completo.png} % Inserta una imagen
+		\vspace{0.3cm}
+		%\caption*{\textup{\textbf{Nota}: Obtenido de https://evaluacionred-g3-2019.fandom.com/}}
+		\vspace{-0.8cm}
+		\label{fig:MER_com} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\subsection{Diagrama relacional}
+	En la figura \ref{fig:diag_rela} se presenta el diagrama relacional derivado del modelo entidad-relación mostrado en la figura \ref{fig:ent_atri} y figura \ref{fig:MER_com}. Este diagrama refleja la estructura final de la base de datos, organizando las tablas y sus relaciones de acuerdo con las reglas de normalización. A través de este diagrama, se puede visualizar cómo se distribuyen los datos en las distintas tablas, asegurando la eficiencia en el almacenamiento y el manejo adecuado de las relaciones entre las entidades del sistema.
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Diagrama Relacional]
+		{\newline Diagrama Relacional.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagenes/cap_3/modelo_relacional.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:diag_rela} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\subsection{Diseño de la interfaz}
+	
+	% \vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Página web]
+		{\newline Interfaz gráfica - Página web.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS00.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali00} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{-0.6cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	En la figura \ref{fig:cali00} se ve la página web inicial de la Empresa de transportes Cali Internacional, posteriormente en la Figura \ref{fig:cali01} se observa la página de inicio de sesión.
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Inicio de sesión]
+		{\newline Interfaz gráfica - Inicio de sesión.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS01.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali01} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Dashboard del sistema]
+		{\newline Interfaz gráfica - Dashboard del sistema.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.85\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS02.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali02} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{-0.6cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	En la figura \ref{fig:cali02} se ve el dashboard del sistema y en la Figura \ref{fig:cali08} como para te ña gestión de usuarios se observa la página de actualización de datos de perfil.
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Datos de perfil]
+		{\newline Interfaz gráfica - Datos de perfil.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.85\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS08.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali08} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Cambio de contraseña]
+		{\newline Interfaz gráfica - Cambio de contraseña.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.85\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS09.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali09} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{-0.6cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	En la figura \ref{fig:cali09} se ve el cambio de contraseña, posteriormente en la Figura \ref{fig:cali23} se observa la lista de conductores.
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Lista de conductores]
+		{\newline Interfaz gráfica - Lista de conductores.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS23.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali23} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Lista de accesos]
+		{\newline Interfaz gráfica - Lista de accesos.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.85\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS18.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali18} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	\vspace{-0.6cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	En la figura \ref{fig:cali18} se observa la lista de accesos de usuarios al sistema, posteriormente en la Figura \ref{fig:cali19} se observa informe de ventas según una fecha específica.
+	
+	\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
+	
+	\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+		\caption[Interfaz gráfica - Informe de ventas]
+		{\newline Interfaz gráfica - Informe de ventas.} % Leyenda en la parte superior
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagenes/cap_3/Img_calibus/CALIBUS19.png} % Inserta una imagen
+		
+		\begin{flushleft}
+			%\hspace{1.20cm} \textbf{Nota.} Organigrama obtenido en entrevista con el administrador. % Nota al pie para esta figura
+		\end{flushleft}
+		\vspace{-16pt}
+		\label{fig:cali19} % Etiqueta para referencia cruzada
+	\end{figure}
+	
+	
+	
 \section{IMPLEMENTACIÓN Y PRUEBA DE UNIDAD}
 \section{INTEGRACIÓN Y PRUEBA DE SISTEMA}
 \section{OPERACIÓN Y MANTENIMIENTO}
