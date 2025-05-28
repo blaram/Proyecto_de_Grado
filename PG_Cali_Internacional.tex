@@ -17,6 +17,9 @@
 
 \usepackage{changepage} % Para ajustar márgenes
 
+\usepackage{listings} % Para mostrar código fuente
+\usepackage{xcolor}  % Para colores
+
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -27,8 +30,11 @@
 \usepackage{lipsum} % Carga el paquete lipsum
 \usepackage{microtype}
 \usepackage{hyperref} % Para enlaces a los capitulos secciones en el indice
+\usepackage{changepage} % Para ajustar márgenes
 
 % \usepackage{showframe}                % Para ver lineas de margenes
+
+\definecolor{gris}{gray}{0.95}
 
 \addbibresource{parte_final/bibliografia.bib}
 
@@ -129,6 +135,22 @@
 }
 \makeatother
 
+\lstset{
+	language=Python,
+	basicstyle=\ttfamily\small, % Formato del código
+	frame=single, % Marco alrededor del código
+	tabsize=3,
+	keywordstyle=\color{violet}\bfseries,  % Palabras clave en azul y negrita
+	commentstyle=\color{olive},  % Comentarios en verde
+	stringstyle=\color{cyan},  % Cadenas de texto en rojo
+	backgroundcolor=\color{gris},  % Fondo gris claro
+	breakatwhitespace=false,         % Activarlo para que los saltos automáticos solo se apliquen en los espacios en blanco
+	breaklines=true,                 % Activa el salto de línea automático
+	%xleftmargin=2.54cm, % Márgenes desde la izquierda
+	%framexleftmargin=2.54cm, % Espacio para el marco
+}
+
+
 \begin{document}
 	\spacing{2}                     % Interlineado
 	\frontmatter
@@ -140,17 +162,25 @@
 	%\include{parte_inicial/dedicatoria}
 	% Agradecimientos
 	%\include{parte_inicial/agradecimientos}
+	% Resumen
+	
+	\include{capitulos/resumen.tex}
+	
+	
+	\clearpage
 	\renewcommand{\contentsname}{\hfill\bfseries\normalsize CONTENIDO\hfill}
 	\tableofcontents
 	\thispagestyle{empty}
 	\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
 	
+	\addcontentsline{toc}{chapter}{RESUMEN} % Agregar al índice general
+	
 	% Índice de Figuras
-	% \listoffigures
+	\listoffigures
 	
 	
 	% Índice de Tablas
-	% \listoftables
+	\listoftables
 	
 	\mainmatter
 	% Introduccción
@@ -160,6 +190,8 @@
 	\include{capitulos/marco_teorico}
 	% Marco aplicativo
 	\include{capitulos/marco_aplicativo}
+	% Calidad y seguridad
+	\include{capitulos/calidad_seguridad}
 	% jConclusiones y recomendaciones
 	\include{capitulos/conclusiones_recomendaciones}
 	

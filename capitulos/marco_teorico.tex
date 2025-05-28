@@ -297,7 +297,7 @@
 			\includegraphics[width=0.65\textwidth]{imagenes/figura2_2.png} % Inserta una imagen
 			\vspace{0.3cm}
 			\caption*{\textup{\textbf{Nota}: Imagen tomada de \textcite{diaz2013entrevista}, \textit{La entrevista, recurso flexible.}}}
-			\vspace{-0.8cm}
+			\vspace{-0.6cm}
 			\label{fig:figura2_2} % Etiqueta para referencia cruzada
 		\end{figure}
 		
@@ -358,10 +358,10 @@
 			{\newline Ejemplo de Diagrama de casos de uso.} % Leyenda en la parte superior
 			\vspace{0.3cm}
 			\centering
-			\includegraphics[width=0.7\textwidth]{imagenes/diagramas_casos_de_uso/venta-pasajes-casos-uso.png} % Inserta una imagen
+			\includegraphics[width=0.65\textwidth]{imagenes/diagramas_casos_de_uso/venta-pasajes-casos-uso.png} % Inserta una imagen
 			\vspace{0.3cm}
-			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
-			\vspace{-0.6cm}
+			\caption*{\textup{\textbf{Nota}: Caso de uso para la venta de pasajes}}
+			\vspace{-0.75cm}
 			\label{fig:figura_caso_uso} % Etiqueta para referencia cruzada
 		\end{figure}		
 		
@@ -395,9 +395,9 @@
 	\section{MODELO ENTIDAD - RELACIÓN}
 		Conforme a la segunda etapa del modelo en cascada, en su punto \ref{subsec:Dis_sis_softwa}, se aborda el diseño de la base de datos, que es fundamental para la estructuración y almacenamiento eficiente de la información del sistema.
 		
-		El modelo entidad-relación (ER) es una herramienta fundamental en el diseño de bases de datos, que se utiliza para representar de manera gráfica la estructura de los datos y las relaciones entre ellos. Propuesto por Peter Chen en 1976, este modelo permite a los diseñadores de bases de datos conceptualizar y organizar la información de manera intuitiva, facilitando la comprensión de los requisitos del sistema antes de la implementación de la base de datos \parencite{theentity1976Chen}.
+		El modelo entidad-relación (ER) es una herramienta fundamental en el diseño de bases de datos, que se utiliza para representar de manera gráfica la estructura de los datos y las relaciones entre ellos. Propuesto por Peter Chen en 1976, este modelo permite a los diseñadores de bases de datos conceptualizar y organizar la información de manera intuitiva, facilitando la comprensión de los requisitos del sistema antes de la implementación de la base de datos \parencite{theentity1976Chen}.\\
 		
-	\subsection{Componentes del modelo}
+	\textbf{Componentes del modelo}
 		
 		\textbf{Entidades:} Se trata de cualquier objeto u elemento (real o abstracto) acerca del cual se pueda almacenar información en la base de datos. Es decir cualquier elemento informativo que tenga importancia para una base de datos y es representada por un rectángulo, dentro del cual se escribe lo que representa.
 		
@@ -424,12 +424,12 @@
 		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
 			\caption[Ejemplo MER]
 			{\newline Ejemplo de Modelo entidad-relación.} % Leyenda en la parte superior
-			\vspace{0.3cm}
+			% \vspace{0.3cm}
 			\centering
 			\includegraphics[width=0.9\textwidth]{imagenes/figura2_3.png} % Inserta una imagen
 			\vspace{0.3cm}
-			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
-			\vspace{-0.6cm}
+			\caption*{\textup{\textbf{Nota}: Modelo entidad-relación de dos entidades con sus atributos.}}
+			\vspace{-0.75cm}
 			\label{fig:figura2_3} % Etiqueta para referencia cruzada
 		\end{figure}
 	
@@ -446,19 +446,19 @@
 	\subsection{Normalización}
 		La normalización es el proceso de organización de una base de datos para reducir la redundancia y mejorar la integridad de los datos. Las formas normales más comunes son:
 		
-		Primera Forma Normal (1FN): Una tabla está en 1FN si todos sus atributos contienen valores atómicos (indivisibles) y cada entrada de la tabla tiene un único valor por columna. Es decir, no debe haber grupos repetidos ni atributos con listas de valores, como se puede ver en la figura \ref{fig:figura_1FN}
+		Primera Forma Normal (1FN): Una tabla está en 1FN si todos sus atributos contienen valores atómicos (indivisibles) y cada entrada de la tabla tiene un único valor por columna. Es decir, no debe haber grupos repetidos ni atributos con listas de valores, como se puede ver en la figura \ref{fig:figura_1FN}\\
 		
 		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 		
-		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
-			\caption[Ejemplo 1FN]
+		\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo Primera Forma Normal]
 			{\newline Ejemplo de Primera Forma Normal} % Leyenda en la parte superior
 			\vspace{-0.2cm}
 			\centering
 			\includegraphics[width=0.7\textwidth]{imagenes/normalizacion/1FN.png} % Inserta una imagen
 			\vspace{0.3cm}
-			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
-			\vspace{-0.6cm}
+			\caption*{\textup{\textbf{Nota}: Tabla donde el atributo Ubicación se divide en dos atributos que son Ciudad y País.}}
+			\vspace{-0.75cm}
 			\label{fig:figura_1FN} % Etiqueta para referencia cruzada
 		\end{figure}
 		
@@ -466,33 +466,39 @@
 		
 		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 		
-		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
-			\caption[Ejemplo 1FN]
+		\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo Segunda Forma Normal]
 			{\newline Ejemplo de Segunda Forma Normal} % Leyenda en la parte superior
 			\vspace{0.2cm}
 			\centering
-			\includegraphics[width=0.70\textwidth]{imagenes/normalizacion/2FN.png} % Inserta una imagen
-			\vspace{0.3cm}
-			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
+			\includegraphics[width=0.75\textwidth]{imagenes/normalizacion/2FN.png} % Inserta una imagen
+			% \vspace{0.3cm}
 			\vspace{-0.6cm}
 			\label{fig:figura_2FN} % Etiqueta para referencia cruzada
 		\end{figure}
+		
+		\begin{adjustwidth}{1.27cm}{1.27cm}
+			\textup{\textbf{Nota}: En la primera tabla los atributos Origen y Destino dependen del atributo Código de vuelo, entonces lo dividimos en dos tablas.}
+		\end{adjustwidth}
 		
 		Tercera Forma Normal (3FN): Una tabla está en 3FN si cumple con 2FN y no tiene dependencias transitivas. Esto significa que los atributos no clave no dependen de otros atributos no clave, asi como se observa en la figura \ref{fig:figura_3FN}.
 		
 		\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 		
-		\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
-			\caption[Ejemplo 1FN]
+		\begin{figure}[!h] % 'H' del paquete 'float' para mantener posición	
+			\caption[Ejemplo Tercera Forma Normal]
 			{\newline Ejemplo de Tercera Forma Normal} % Leyenda en la parte superior
 			\vspace{0.2cm}
 			\centering
-			\includegraphics[width=0.6\textwidth]{imagenes/normalizacion/3FN.png} % Inserta una imagen
+			\includegraphics[width=0.7\textwidth]{imagenes/normalizacion/3FN.png} % Inserta una imagen
 			\vspace{0.3cm}
 			% \caption*{\textup{\textbf{Nota}: Obtenido de https://www.nngroup.com/}}
 			\vspace{-0.6cm}
 			\label{fig:figura_3FN} % Etiqueta para referencia cruzada
 		\end{figure}
+		\begin{adjustwidth}{1.27cm}{1.27cm}
+			\textup{\textbf{Nota}: En la primera tabla se observa que los atributos Materia, Sigla, id\_carrera no dependen de CI, lo que hace que subdividamos la tabla en otras tablas más.}
+		\end{adjustwidth}
 		
 	\section{PATRÓN DE DISEÑO WEB}
 		De acuerdo con el modelo en cascada, en su segunda etapa, que corresponde al punto \ref{subsec:Dis_sis_softwa} sobre el Diseño del sistema y del software, en esta etapa se desarrolla también el diseño de la interfaz, que será el medio principal de interacción del usuario con el sistema."
@@ -662,18 +668,12 @@
 		% \textbf{Nota}: Esta es la nota de la tabla, explicando datos relevantes.
 		
 	\section{PRUEBAS}
-		La etapa de pruebas se realiza para identificar, corregir errores y asegurar que el sistema funcione según las especificaciones planteadas en los requerimientos. De acuerdo con \textcite{sommerville2011introduccion}, las pruebas de software deben ser meticulosas, comprobando tanto las funciones internas del sistema como su comportamiento desde la perspectiva del usuario final. Las pruebas no solo permiten detectar defectos, sino también asegurar que el software opere correctamente en diferentes escenarios, reduciendo el riesgo de errores que afecten la experiencia del usuario o la operación de la empresa.
-		
-		\textcite{sommerville2011introduccion} clasifica las pruebas de software en cuatro categorías principales: pruebas unitarias, pruebas de integración, pruebas de sistema y pruebas de aceptación.
-		
-	\subsection{Pruebas unitarias}
+		La etapa de pruebas se realiza para identificar, corregir errores y asegurar que el sistema funcione según las especificaciones planteadas en los requerimientos. De acuerdo con \textcite{sommerville2011introduccion}, las pruebas de software deben ser meticulosas, comprobando tanto las funciones internas del sistema como su comportamiento desde la perspectiva del usuario final. Las pruebas no solo permiten detectar defectos, sino también asegurar que el software opere correctamente en diferentes escenarios, reduciendo el riesgo de errores que afecten la experiencia del usuario o la operación de la empresa.\\		
+	\textbf{Pruebas unitarias}
+	
 		Las pruebas unitarias verifican el funcionamiento de las partes más pequeñas del software, llamadas "unidades". Cada unidad, generalmente una función o un módulo, se prueba de forma aislada para asegurar que su comportamiento sea correcto. Como destaca \textcite{pressman2010ingenieria}, estas pruebas son fundamentales para detectar errores en los componentes básicos del sistema, lo cual facilita una construcción más sólida del sistema completo.
-	\subsection{Pruebas integración}
-		Una vez que los módulos individuales son validados, las pruebas de integración examinan cómo interactúan entre sí. Según \textcite{sommerville2011introduccion}, en esta fase se detectan problemas en la comunicación y la interoperabilidad de las distintas partes del software, estas pruebas buscan identificar problemas que surgen cuando se combinan los distintos componentes, como incompatibilidades de interfaces o errores de comunicación. 
-	\subsection{Pruebas de sistema}
-		Las pruebas de sistema analizan el software en su totalidad, evaluando si cumple con todos los requerimientos funcionales y no funcionales. Estas pruebas se realizan en un entorno que simula el real, evaluando factores como el rendimiento y la seguridad.
-	\subsection{Pruebas de aceptación}
-		Las pruebas de aceptación tienen como objetivo validar que el software cumple con los requisitos del cliente, estas pruebas se realizan con la participación de los usuarios finales, quienes validan que el sistema funcione según lo esperado y satisfaga sus necesidades. A diferencia de los tipos de pruebas anteriores, las pruebas de aceptación no se automatizan, sino que se llevan a cabo mediante protocolos de prueba específicos.	
+		
+		También las pruebas unitarias permiten detectar errores rápidamente, lo que reduce el costo y el tiempo necesarios para corregir problemas en etapas avanzadas del desarrollo. Estas pruebas se enfocan en verificar la funcionalidad de métodos o funciones específicas en lugar de todo el sistema, utilizando herramientas como unittest en Python. Además, su ejecución frecuente fomenta la confianza en la estabilidad del sistema a medida que se realizan cambios en el código.	
 	\section{MODELO DE CALIDAD BOEHM}
 		El modelo de calidad de Boehm fue propuesto por Barry Boehm en los años 70 como un enfoque exhaustivo para evaluar la calidad del software de forma estructurada. Su objetivo principal es ofrecer un marco de referencia que descompone el concepto de calidad en atributos y sub-atributos específicos, permitiendo a los ingenieros de software identificar y medir aspectos clave para mejorar la calidad del software desarrollado. Según \textcite{pressman2010ingenieria}, este modelo proporciona una guía que facilita el cumplimiento de los objetivos de calidad, estableciendo métricas y criterios que ayudan en la toma de decisiones a lo largo del proceso de desarrollo.
 	\subsection{Estructura jerárquica del modelo de calidad Boehm}
@@ -701,55 +701,28 @@
 		
 		3) Portabilidad facilidad que tiene el software de ser utilizado en entorno distinto.
 		
-		En el segundo nivel, los constructores intermedios son características técnicas que impactan directamente los usos primarios. En este nivel, se consideran elementos como portabilidad, confiabilidad, eficiencia, ingeniería social (seguridad) y entendibilidad.
+		\subsection{Usabilidad}
 		
-		Portabilidad: La capacidad del software para funcionar en distintos entornos o plataformas sin necesidad de cambios significativos.
+		La usabilidad en el modelo de calidad de Boehm se centra en la facilidad y eficiencia con la que los usuarios pueden interactuar con un sistema de software. Esta cualidad es evaluada en varios aspectos clave, que Boehm estructura en componentes específicos para garantizar una experiencia de usuario satisfactoria y una operatividad óptima del sistema. Entre los factores principales se encuentran:
 		
-		Confiabilidad: Define la estabilidad y seguridad del sistema, asegurando que cumple sus funciones sin fallos y resiste condiciones inesperadas.
+		\begin{enumerate}[label=\textbf{\alph*)}, left=0cm, labelsep = 0.8cm, topsep = 0pt, parsep = 0pt] % Cambia el formato del inciso (a, b, c...)
+			\item \textbf{Facilidad de aprendizaje:} El software debe permitir a los nuevos usuarios comprender y utilizar sus funciones esenciales rápidamente. Esto es particularmente relevante en entornos con rotación frecuente de personal o en sistemas diseñados para usuarios ocasionales (Boehm, 1978).
+			\item \textbf{Eficiencia operativa:} Evalúa qué tan eficazmente los usuarios logran sus objetivos con un esfuerzo mínimo, lo que incluye una navegación clara e interfaces intuitivas. Este aspecto asegura que las tareas sean completadas con rapidez y precisión (Sommerville, 2011).
+			\item \textbf{Satisfacción del usuario:} Considera la percepción subjetiva sobre la facilidad de uso, el diseño de la interfaz y la respuesta general del sistema, lo que resulta crucial para la adopción del software y su aceptación a largo plazo (Pressman, 2010).
+			\item \textbf{Minimización de errores:} Se enfoca en reducir la probabilidad de errores de usuario y en proporcionar mecanismos claros para corregirlos. Esto incluye mensajes de error comprensibles y funciones para mitigar las consecuencias de los errores (Boehm, 1978).
+			\item \textbf{Flexibilidad y adaptabilidad:} Examina cómo el sistema puede ajustarse a diferentes necesidades y preferencias de los usuarios, lo que es importante en entornos donde las condiciones cambian frecuentemente (Pressman, 2010).
+		\end{enumerate}
+			
+		\subsection{Portabilidad}
 		
-		Eficiencia: Enfoca el uso adecuado de los recursos, optimizando tiempos de respuesta y el uso de memoria.
-		
-		Ingeniería Social (Seguridad): Evalúa las medidas implementadas para proteger el sistema de amenazas externas y salvaguardar los datos de los usuarios.
-		
-		Entendibilidad: La facilidad con la que los desarrolladores pueden comprender el código o la arquitectura del software para realizar modificaciones.
-		
-		Modificabilidad: Posibilita cambios y adaptaciones en el software
-		
-		Y por último en el tercer nivel, los constructores primitivos son métricas y atributos básicos que sirven como fundamentos para los constructores intermedios. En esta categoría se incluyen aspectos como independencia de dispositivo, ser contenedores, precisión, completitud, integridad, compatibilidad, accesibilidad y claridad.
-		
-		Independencia de Dispositivo: La capacidad del sistema para operar en múltiples dispositivos sin problemas.
-		
-		Ser contenedores: Habilidad para encapsular y gestionar recursos
-		
-		Precisión: Exactitud en los resultados y operaciones.
-		
-		Completitud: Implementación total de funcionalidades requeridas.
-		
-		Integridad: Garantiza la seguridad y protección de la información contra accesos no autorizados o fallos.
-		
-		Consistencia: Uniformidad en el comportamiento.
-		
-		Compatibilidad: Interoperabilidad con otros sistemas.
-		
-		Eficiencia del dispositivo: Optimización de recursos hardware.
-		
-		Accesibilidad: Facilidad de uso para diferentes usuarios.
-		
-		Comunicación: Claridad en la interacción sistema-usuario.
-		
-		Claridad: Facilidad de comprensión del código.
-		
-		Estructuración: Organización lógica del software.
-		
-		Consistencia: Uniformidad en el diseño y desarrollo.
-		
-		Legalidad: Cumplimiento de normativas y estándares.
-		
-		Crecimiento: Capacidad de expansión y escalabilidad.
-		
+		La portabilidad, según el modelo de calidad de Boehm, representa la capacidad del software para trasladarse y operar en diferentes plataformas o entornos tecnológicos con modificaciones mínimas o nulas. Este atributo es importante en un mundo donde los sistemas y dispositivos evolucionan constantemente, las empresas buscan soluciones escalables y adaptables que puedan implementarse en múltiples configuraciones técnicas.
 
-	
-	
+		\begin{enumerate}[label=\textbf{\alph*)}, left=0cm, labelsep = 0.8cm, topsep = 0pt, parsep = 0pt] % Cambia el formato del inciso (a, b, c...)
+			\item \textbf{Adaptabilidad:} La adaptabilidad hace referencia a la facilidad con la que el software puede ajustarse a diferentes entornos operativos. Esto incluye compatibilidad con múltiples sistemas operativos, arquitecturas de hardware y dispositivos. Según Sommerville (2011), esta característica asegura que el sistema pueda evolucionar sin ser limitado por la infraestructura tecnológica. En el diseño, se priorizan estándares abiertos y el desacoplamiento del software de elementos específicos del hardware.
+			\item \textbf{Instalación y configuración sencilla:} Otro componente fundamental de la portabilidad es la facilidad con que el software puede ser instalado en nuevos entornos. Esto implica minimizar las dependencias técnicas y ofrecer procesos de configuración claros, automáticos o guiados. Pressman (2010) señala que un sistema portable debe ofrecer una experiencia de instalación optimizada, lo cual es esencial para empresas que operan en múltiples ubicaciones o que implementan actualizaciones frecuentes.
+			\item \textbf{Sustituibilidad:} Este aspecto se enfoca en la capacidad del software para reemplazar a otro sistema similar sin interrumpir el funcionamiento normal. Se busca garantizar la compatibilidad con los datos existentes, minimizar el tiempo de migración y evitar la pérdida de funcionalidad. Boehm (1978) enfatiza que esta característica es particularmente importante para organizaciones que dependen de software integrado con procesos comerciales críticos.
+		\end{enumerate}
+			
 	%\vspace{0.3cm} % Agregar 1 cm de espacio entre el párrafo y la figura
 	
 	%	\begin{figure}[h] % 'H' del paquete 'float' para mantener posición	
