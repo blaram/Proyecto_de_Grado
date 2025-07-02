@@ -155,25 +155,29 @@
 	\spacing{2}                     % Interlineado
 	\frontmatter
 	\pagenumbering{gobble} % Eliminar numeración de página del índice
+	%\pagestyle{plain}
 	\include{caratula}
 	\thispagestyle{empty}
 	\sloppy
+	% Hoja de calificaciones
+	%\include{parte_inicial/hoja_calificaciones}
+	% Licencia de uso
+	%\include{parte_inicial/licencia_uso}
 	% Dedicatoria
-	%\include{parte_inicial/dedicatoria}
+	\include{parte_inicial/dedicatoria}
 	% Agradecimientos
-	%\include{parte_inicial/agradecimientos}
+	\include{parte_inicial/agradecimientos}
 	% Resumen
 	
-	\include{capitulos/resumen.tex}
-	
+	\include{parte_inicial/resumen.tex}
+	\include{parte_inicial/abstract.tex}
 	
 	\clearpage
+	
 	\renewcommand{\contentsname}{\hfill\bfseries\normalsize CONTENIDO\hfill}
 	\tableofcontents
 	\thispagestyle{empty}
-	\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
-	
-	\addcontentsline{toc}{chapter}{RESUMEN} % Agregar al índice general
+	%\addtocontents{toc}{~\hfill\textbf{Pág.}\par}
 	
 	% Índice de Figuras
 	\listoffigures
@@ -198,4 +202,6 @@
 	\backmatter
 	% Bibliografía
 	\include{parte_final/bibliografia}
+	% apendices
+	\include{parte_final/apendices}
 \end{document}
