@@ -150,14 +150,30 @@
 	%framexleftmargin=2.54cm, % Espacio para el marco
 }
 
+%Redefincion del plain
+\makeatletter
+\renewcommand{\ps@plain}{
+	\renewcommand{\@oddhead}{\hfill\thepage} % Número arriba a la derecha
+	\renewcommand{\@evenhead}{\hfill\thepage}
+	\renewcommand{\@oddfoot}{}
+	\renewcommand{\@evenfoot}{}
+}
+
 
 \begin{document}
 	\spacing{2}                     % Interlineado
 	\frontmatter
-	\pagenumbering{gobble} % Eliminar numeración de página del índice
+
 	%\pagestyle{plain}
 	\include{caratula}
 	\thispagestyle{empty}
+	
+	\clearpage
+	
+	% Aquí empieza la numeración romana minúscula (i, ii, iii)
+	\pagenumbering{roman}
+	\renewcommand{\thepage}{\roman{page}}
+	
 	\sloppy
 	% Hoja de calificaciones
 	%\include{parte_inicial/hoja_calificaciones}
